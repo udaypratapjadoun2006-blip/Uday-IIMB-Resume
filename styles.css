@@ -1,0 +1,131 @@
+/* styles.css */
+
+/* Add Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #1e3a8a;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #2563eb, #1e3a8a);
+  color: white;
+}
+
+.tagline-container {
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.tagline {
+  display: block;
+  animation: slide 6s infinite;
+}
+
+.tagline:nth-child(2) {
+  animation-delay: 3s;
+}
+
+@keyframes slide {
+  0% { transform: translateY(100%); }
+  10% { transform: translateY(0); }
+  40% { transform: translateY(0); }
+  50% { transform: translateY(-100%); }
+  100% { transform: translateY(-100%); }
+}
+
+.section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #1e3a8a;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex: 1;
+  min-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1e3a8a;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}
